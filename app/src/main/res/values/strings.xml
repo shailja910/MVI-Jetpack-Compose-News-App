@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MVI_NewsApp_JetpackCompose</string>
+    <string name="OBTitle1">Welcome</string>
+    <string name="OBTitle2">Features</string>
+    <string name="OBTitle3">get started</string>
+    <string name="OBDesc1">This is a news app which tells about the recent news happening around the world</string>
+    <string name="OBDesc2">It has breaking news,search news and save the news and if you want to read the full article of the news.</string>
+    <string name="OBDesc3">This is the last page of onbaording , let start the app after this page</string>
+
+</resources>
