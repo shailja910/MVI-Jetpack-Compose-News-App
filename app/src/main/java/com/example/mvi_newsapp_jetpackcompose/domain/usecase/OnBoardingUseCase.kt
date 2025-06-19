@@ -1,7 +1,7 @@
 package com.example.mvi_newsapp_jetpackcompose.domain.usecase
 
+import com.example.mvi_newsapp_jetpackcompose.domain.repositoryinterfaces.OnBoardingRepo
 import com.example.mvi_newsapp_jetpackcompose.domain.model.OnBoardingPages
-import com.example.mvi_newsapp_jetpackcompose.data.repository.OnBoardingRepo
 
 class OnBoardingUseCase(val repo : OnBoardingRepo){
         operator fun invoke(): List<OnBoardingPages> {

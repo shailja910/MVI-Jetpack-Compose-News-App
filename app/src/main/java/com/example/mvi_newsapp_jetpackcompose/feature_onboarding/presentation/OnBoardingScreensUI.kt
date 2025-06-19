@@ -1,4 +1,4 @@
-package com.example.mvi_newsapp_jetpackcompose.presentation.a_onboardingmodule
+package com.example.mvi_newsapp_jetpackcompose.feature_onboarding.presentation
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -21,7 +21,7 @@ import com.example.mvi_newsapp_jetpackcompose.domain.usecase.OnBoardingUseCase
 import kotlinx.coroutines.launch
 
 @Composable
-fun OnBoardingScreensUI(viewModel : OnBoardingViewModel, useCase:OnBoardingUseCase,onFinish:()->Unit) {
+fun OnBoardingScreensUI(viewModel : OnBoardingViewModel, useCase:OnBoardingUseCase, onFinish:()->Unit) {
 
     val onbaordinglist = useCase.invoke()
 

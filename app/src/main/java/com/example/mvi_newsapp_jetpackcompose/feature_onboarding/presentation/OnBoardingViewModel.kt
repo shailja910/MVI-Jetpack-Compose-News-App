@@ -1,4 +1,4 @@
-package com.example.mvi_newsapp_jetpackcompose.presentation.a_onboardingmodule
+package com.example.mvi_newsapp_jetpackcompose.feature_onboarding.presentation
 
 import androidx.lifecycle.ViewModel
 import com.example.mvi_newsapp_jetpackcompose.domain.usecase.OnBoardingUseCase
@@ -29,7 +29,7 @@ val total_pages = (useCase.invoke()).size  //tell the size of list
 
                     OnboardingIntent.previous -> {
                         if(currentPage.pageOnUI > 0)
-                            _onboardState.value= OnBoardingStateOfUI.page(currentPage.pageOnUI-1)
+                            _onboardState.value= OnBoardingStateOfUI.page(currentPage.pageOnUI - 1)
                     }
 
 

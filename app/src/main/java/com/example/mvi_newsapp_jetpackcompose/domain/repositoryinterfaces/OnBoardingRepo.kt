@@ -1,4 +1,4 @@
-package com.example.mvi_newsapp_jetpackcompose.data.repository
+package com.example.mvi_newsapp_jetpackcompose.domain.repositoryinterfaces
 
 import com.example.mvi_newsapp_jetpackcompose.domain.model.OnBoardingPages
 

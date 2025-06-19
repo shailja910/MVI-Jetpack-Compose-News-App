@@ -69,4 +69,9 @@ dependencies {
 
     //pager indicator of jetpack compose and not accompanist
     implementation("androidx.compose.foundation:foundation:1.6.0")
-    }
+
+
+    // gson for json objects in response
+    implementation("com.google.code.gson:gson:2.10.1")
+
+}

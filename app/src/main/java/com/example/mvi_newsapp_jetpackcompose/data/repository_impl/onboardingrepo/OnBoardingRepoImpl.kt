@@ -1,10 +1,11 @@
-package com.example.mvi_newsapp_jetpackcompose.data.repository
+package com.example.mvi_newsapp_jetpackcompose.data.repository_impl.onboardingrepo
 
 
 import com.example.mvi_newsapp_jetpackcompose.domain.model.OnBoardingPages
 import com.example.mvi_newsapp_jetpackcompose.R
+import com.example.mvi_newsapp_jetpackcompose.domain.repositoryinterfaces.OnBoardingRepo
 
-class OnBoardingRepoImpl : OnBoardingRepo{
+class OnBoardingRepoImpl : OnBoardingRepo {
     override fun getOnboardingPages(): List<OnBoardingPages> {
         val listOfOnboarding = listOf(
             OnBoardingPages(R.string.OBTitle1,R.string.OBDesc1,R.drawable.ob_image1),
