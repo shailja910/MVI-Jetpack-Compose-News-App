@@ -1,8 +1,19 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.kapt)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.hilt)
 }
+
+val newsApiKey: String = project.rootProject
+    .file("local.properties")
+    .inputStream()
+    .use { props ->
+        Properties().apply { load(props) }
+    }["API_KEY"] as String
 
 android {
     namespace = "com.example.mvi_newsapp_jetpackcompose"
@@ -16,6 +27,7 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField("String", "API_KEY", "\"$newsApiKey\"")
     }
 
     buildTypes {
@@ -36,6 +48,7 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
 }
 
@@ -73,5 +86,18 @@ dependencies {
 
     // gson for json objects in response
     implementation("com.google.code.gson:gson:2.10.1")
+
+
+    //coil for image ;loading
+    implementation("io.coil-kt:coil-compose:2.2.2")
+
+    //retrofit
+    implementation("com.squareup.retrofit2:retrofit:2.9.0") // Retrofit core
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0") // For JSON to object mapping
+
+    // dagger
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.compiler)
+    implementation("androidx.hilt:hilt-navigation-compose:1.1.0")
 
 }
