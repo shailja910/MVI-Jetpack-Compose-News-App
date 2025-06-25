@@ -13,4 +13,10 @@ interface C_RetrofitAPI {
         @Query("apiKey") apiKey: String = BuildConfig.API_KEY
     ): ArticleResponse
 
+
+    @GET("v2/everything")
+    suspend fun getSearchedNews(
+        @Query("q") query : String,
+        @Query("apiKey") apiKey: String= BuildConfig.API_KEY
+    ):ArticleResponse
 }

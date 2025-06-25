@@ -13,7 +13,8 @@ import androidx.compose.ui.Modifier
 import com.example.mvi_newsapp_jetpackcompose.features.breakingnews.presentastion.BreakingNewsScreen
 import com.example.mvi_newsapp_jetpackcompose.features.breakingnews.presentastion.BreakingNewsViewModel
 import androidx.hilt.navigation.compose.hiltViewModel
-
+import com.example.mvi_newsapp_jetpackcompose.features.searchnews.presentation.SearchNewsScreenUI
+import com.example.mvi_newsapp_jetpackcompose.features.searchnews.presentation.SearchNewsViewModel
 
 
 //bottom navigation code
@@ -49,8 +50,11 @@ fun BottomNavigationScreens()
     ) { innerPadding ->
         Box(modifier = Modifier.padding(innerPadding)) {
             val viewModel: BreakingNewsViewModel = hiltViewModel()
+
+            val viewModelsearch: SearchNewsViewModel = hiltViewModel()
             when (selectedTab) {
                 "breaking" -> BreakingNewsScreen(viewModel)
+                "search" -> SearchNewsScreenUI(viewModelsearch)
             }
         }
     }

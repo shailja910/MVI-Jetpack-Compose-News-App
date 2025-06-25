@@ -4,6 +4,8 @@ import com.example.mvi_newsapp_jetpackcompose.features.onboarding.data.A_OnBoard
 import com.example.mvi_newsapp_jetpackcompose.features.breakingnews.data.B_BreakingNewsRepoImpl
 import com.example.mvi_newsapp_jetpackcompose.features.onboarding.domain.repositoryinterfaces.A_OnBoardingRepo
 import com.example.mvi_newsapp_jetpackcompose.features.onboarding.domain.repositoryinterfaces.B_BreakingNewsRepo
+import com.example.mvi_newsapp_jetpackcompose.features.searchnews.data.repoimpl.SearchNewsRepoImpl
+import com.example.mvi_newsapp_jetpackcompose.features.searchnews.domain.repointerface.SearchNewsRepository
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -26,4 +28,10 @@ abstract class RepoandRepoImplBinding {
     abstract fun bindBreakingNewsRepository(
         breakingnewsRepositoryImpl: B_BreakingNewsRepoImpl
     ): B_BreakingNewsRepo
+
+    @Binds
+    @Singleton
+    abstract fun bindSearchNewsRepository(
+        searchnewsRepositoryImpl: SearchNewsRepoImpl
+    ): SearchNewsRepository
 }
