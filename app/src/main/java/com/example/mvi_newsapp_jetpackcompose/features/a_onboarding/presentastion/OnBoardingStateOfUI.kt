@@ -1,6 +1,6 @@
 package com.example.mvi_newsapp_jetpackcompose.features.a_onboarding.presentastion
 
 sealed class OnBoardingStateOfUI {
-    data class page(val pageOnUI : Int) : OnBoardingStateOfUI()
-    object finished : OnBoardingStateOfUI()
+    data class PageOnUI(val pageIndex : Int) : OnBoardingStateOfUI()
+    object Complete : OnBoardingStateOfUI()
 }
