@@ -64,7 +64,11 @@ fun BottomNavigationScreens()
                 selectedArticleUrl != null -> {
                     WebViewScreen(
                         url = selectedArticleUrl!!,
-                        onBack = { selectedArticleUrl = null }
+                        onBack = { selectedArticleUrl = null },
+                        onFabClick = {
+                            // Handle save article logic here
+                            // e.g., viewModel.saveArticle(selectedArticle)
+                        }
                     )
                 }
 

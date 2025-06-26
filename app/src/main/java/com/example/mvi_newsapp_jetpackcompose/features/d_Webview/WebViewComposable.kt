@@ -21,7 +21,7 @@ import androidx.compose.ui.viewinterop.AndroidView
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun WebViewScreen(url: String, onBack: () -> Unit) {
+fun WebViewScreen(url: String, onBack: () -> Unit,onFabClick: () -> Unit) {
     Scaffold(
         topBar = {
             TopAppBar(
@@ -32,13 +32,17 @@ fun WebViewScreen(url: String, onBack: () -> Unit) {
                     }
                 }
             )
+        },
+        floatingActionButton = {
+            FloatingActionButton(onClick = onFabClick) {
+                Icon(Icons.Default.Favorite, contentDescription = "Save Article")
+            }
         }
     ) { innerPadding ->
         AndroidView(
             factory = {
                 WebView(it).apply {
                     webViewClient = WebViewClient()
-                    settings.javaScriptEnabled = true
                     loadUrl(url)
                 }
             },
