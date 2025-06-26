@@ -11,8 +11,8 @@ import androidx.compose.runtime.setValue
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.mvi_newsapp_jetpackcompose.common_presentation.Navgraphs.BottomNavigationScreens
-import com.example.mvi_newsapp_jetpackcompose.features.onboarding.presentastion.OnBoardingScreensUI
-import com.example.mvi_newsapp_jetpackcompose.features.onboarding.presentastion.OnBoardingViewModel
+import com.example.mvi_newsapp_jetpackcompose.features.a_onboarding.presentastion.OnBoardingScreensUI
+import com.example.mvi_newsapp_jetpackcompose.features.a_onboarding.presentastion.OnBoardingViewModel
 import com.example.mvi_newsapp_jetpackcompose.ui.theme.MVI_NewsApp_JetpackComposeTheme
 import dagger.hilt.android.AndroidEntryPoint
 

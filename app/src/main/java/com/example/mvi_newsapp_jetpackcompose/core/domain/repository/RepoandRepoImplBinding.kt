@@ -1,11 +1,11 @@
 package com.example.mvi_newsapp_jetpackcompose.core.domain.repository
 
-import com.example.mvi_newsapp_jetpackcompose.features.onboarding.data.A_OnBoardingRepoImpl
-import com.example.mvi_newsapp_jetpackcompose.features.breakingnews.data.B_BreakingNewsRepoImpl
-import com.example.mvi_newsapp_jetpackcompose.features.onboarding.domain.repositoryinterfaces.A_OnBoardingRepo
-import com.example.mvi_newsapp_jetpackcompose.features.onboarding.domain.repositoryinterfaces.B_BreakingNewsRepo
-import com.example.mvi_newsapp_jetpackcompose.features.searchnews.data.repoimpl.SearchNewsRepoImpl
-import com.example.mvi_newsapp_jetpackcompose.features.searchnews.domain.repointerface.SearchNewsRepository
+import com.example.mvi_newsapp_jetpackcompose.features.a_onboarding.data.A_OnBoardingRepoImpl
+import com.example.mvi_newsapp_jetpackcompose.features.b_breakingnews.data.B_BreakingNewsRepoImpl
+import com.example.mvi_newsapp_jetpackcompose.features.a_onboarding.domain.repositoryinterfaces.A_OnBoardingRepo
+import com.example.mvi_newsapp_jetpackcompose.features.a_onboarding.domain.repositoryinterfaces.B_BreakingNewsRepo
+import com.example.mvi_newsapp_jetpackcompose.features.c_searchnews.data.repoimpl.SearchNewsRepoImpl
+import com.example.mvi_newsapp_jetpackcompose.features.c_searchnews.domain.repointerface.SearchNewsRepository
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn

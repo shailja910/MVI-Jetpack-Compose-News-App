@@ -75,9 +75,10 @@ dependencies {
 
     // onboarding dependencies
         implementation("androidx.activity:activity-compose:1.9.0")
-        implementation("androidx.navigation:navigation-compose:2.7.7")
         implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.0")
         implementation("androidx.compose.material3:material3:1.2.1")
+
+    //horizontal pager
         implementation("com.google.accompanist:accompanist-pager:0.34.0")
 
     //pager indicator of jetpack compose and not accompanist
@@ -95,9 +96,12 @@ dependencies {
     implementation("com.squareup.retrofit2:retrofit:2.9.0") // Retrofit core
     implementation ("com.squareup.retrofit2:converter-gson:2.9.0") // For JSON to object mapping
 
-    // dagger
+    // dagger add hilt and kapt id to plugin in toml file , add kapt and hilt plugin at top , add hilt plugin in project based gradle
     implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)
     implementation("androidx.hilt:hilt-navigation-compose:1.1.0")
+
+    //to implement navigation components
+    implementation("androidx.navigation:navigation-compose:2.7.7")
 
 }
